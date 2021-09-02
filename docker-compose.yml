@@ -1,0 +1,33 @@
+version: "3"
+services:
+
+  frontend:
+    image: omkar5655/frontend
+    container_name: frontend
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  backend:
+    image: omkar5655/backend
+    container_name: backend
+    environment:
+      database: loizenaidb
+      username: postgres
+      password: 123
+      host: postgres
+      dialect: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: loizenaidb
