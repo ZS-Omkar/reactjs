@@ -1,8 +1,8 @@
-version: "3"
+version: "3.9"
 services:
 
   frontend:
-    image: omkar5655/reactjs:latest
+    image: omkar5655/projectreactjs
     container_name: frontend
     stdin_open: true
     ports:
@@ -10,7 +10,7 @@ services:
     depends_on:
       - backend
   backend:
-    image: omkar5655/reactjsbackend:latest
+    image: omkar5655/projectbackend
     container_name: backend
     environment:
       database: loizenaidb
