@@ -10,7 +10,7 @@ services:
     depends_on:
       - backend
   backend:
-    image: omkar5655/projectbackend:latest
+    image: omkar5655/reactjsbackend:latest
     container_name: backend
     environment:
       database: loizenaidb
