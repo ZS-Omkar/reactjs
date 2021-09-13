@@ -16,7 +16,7 @@ spec:
         - name: backend
           image: omkar5655/backend
           ports:
-            - containerPort: 8080
+            - containerPort: 5000
           env:
             - name: PGUSER
               value: postgres
@@ -29,5 +29,5 @@ spec:
             - name: PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: password
-                  key: PASSWORD
+                  name: pgpassword
+                  key: PGPASSWORD
