@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+  labels:
+    app: react
+spec:
+  selector:
+    matchLabels:
+      app: react
+  template:
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+        - name: react
+          image: omkar5655/frontend
+          imagePullPolicy: Always
+          stdin: true
+          ports:
+            - containerPort: 3000
+      restartPolicy: Always
