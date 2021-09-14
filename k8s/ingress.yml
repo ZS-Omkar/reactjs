@@ -21,4 +21,4 @@ spec:
               service:
                 name: postgres-backend
                 port:
-                  number: 5000
+                  number: 8080
