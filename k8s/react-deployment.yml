@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: react
-          image: omkar5655/frontend
+          image: omkar5655/frontend:latest
           imagePullPolicy: Always
           stdin: true
           ports:
