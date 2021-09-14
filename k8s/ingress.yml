@@ -15,3 +15,10 @@ spec:
                 name: react
                 port:
                   number: 3000
+          - path: /
+              pathType: Prefix
+              backend:
+                service:
+                  name: backend
+                  port:
+                    number: 5000
