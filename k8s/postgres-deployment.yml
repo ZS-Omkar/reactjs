@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: postgres-deployment
 spec:
-  replicas: 1
   selector:
     matchLabels:
       component: postgres
@@ -12,22 +11,15 @@ spec:
       labels:
         component: postgres
     spec:
-      volumes:
-        - name: postgres-storage
-          persistentVolumeClaim:
-            claimName: database-persistent-claim
       containers:
         - name: postgres
-          image: postgres
+          image: postgres:latest
           ports:
             - containerPort: 5432
-          volumeMounts:
-            - name: postgres-storage
-              mountPath: /var/lib/postgresql/data
-              subPath: postgres
           env:
             - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: pgpassword
-                  key: PGPASSWORD
+              value: "123"
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_DB
+              value: loizenaidb
