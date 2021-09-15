@@ -1,9 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: backend-deployment
 spec:
-  replicas: 1
   selector:
     matchLabels:
       component: backend
@@ -18,16 +17,13 @@ spec:
           ports:
             - containerPort: 8080
           env:
-            - name: PGUSER
-              value: postgres
-            - name: PGHOST
-              value: postgres-cluster-service
-            - name: PGPORT
-              value: "5432"
-            - name: PGDATABASE
+            - name: database
               value: loizenaidb
-            - name: PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: pgpassword
-                  key: PGPASSWORD
+            - name: username
+              value: postgres
+            - name: password
+              value: "123"
+            - name: host
+              value: postgres-cluster-service
+            - name: dialect
+              value: postgres
