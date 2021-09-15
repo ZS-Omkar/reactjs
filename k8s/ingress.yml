@@ -12,7 +12,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: react
+                name: react-cluster-service
                 port:
                   number: 3000
           - path: /customers
