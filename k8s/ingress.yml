@@ -12,13 +12,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: backend-cluster-service
+                name: react
                 port:
-                  number: 8080
+                  number: 3000
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: react
+                name: backend-cluster-service
                 port:
-                  number: 3000
+                  number: 8080
