@@ -1,17 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-deployment
-  labels:
-    app: frontend
+  name: react-deployment
 spec:
   selector:
     matchLabels:
-      app: frontend
+      component: frontend
   template:
     metadata:
       labels:
-        app: frontend
+        component: frontend
     spec:
       containers:
         - name: frontend
