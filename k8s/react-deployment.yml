@@ -1,18 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-deployment
+  name: frontend-deployment
+  labels:
+    app: frontend
 spec:
   selector:
     matchLabels:
-      component: react
+      app: frontend
   template:
     metadata:
       labels:
-        component: react
+        app: frontend
     spec:
       containers:
-        - name: react
+        - name: frontend
           image: omkar5655/frontend:latest
           stdin: true
           ports:
