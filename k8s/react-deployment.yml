@@ -5,14 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      component: frontend
+      component: react
   template:
     metadata:
       labels:
-        component: frontend
+        component: react
     spec:
       containers:
-        - name: frontend
+        - name: react
           image: omkar5655/frontend:latest
           stdin: true
           ports:
