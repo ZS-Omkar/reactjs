@@ -16,14 +16,3 @@ spec:
           image: omkar5655/backend:0.0.1
           ports:
             - containerPort: 8080
-          env:
-            - name: database
-              value: loizenaidb
-            - name: username
-              value: postgres
-            - name: password
-              value: "123"
-            - name: host
-              value: postgres-cluster-service
-            - name: dialect
-              value: postgres
