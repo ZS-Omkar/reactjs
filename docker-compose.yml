@@ -9,7 +9,7 @@ services:
     depends_on:
       - backend
   backend:
-    image: omkar5655/backend-node
+    image: omkar5655/backend-node:latest
     container_name: backend
     environment:
       database: loizenaidb
