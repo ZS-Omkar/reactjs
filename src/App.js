@@ -14,6 +14,9 @@ class App extends Component {
           <Route path='/customers' exact={true} component={CustomerList}/>
           <Route path='/customers/:id' component={CustomerEdit}/>
         </Switch>
+        <p>
+          (process.env.REACT_APP_BASE_URL)
+        </p>
       </Router>
     )
   }
