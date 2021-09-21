@@ -14,7 +14,7 @@ services:
     environment:
       - PGDATABASE=loizenaidb
       - PGUSER=postgres
-      - PGPASS=234
+      - PGPASS=123
       - PGHOST=postgres
       - PGDIALECT=postgres
     ports:
