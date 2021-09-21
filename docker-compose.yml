@@ -1,11 +1,13 @@
 version: "3"
 services:
   frontend:
-    image: omkar5655/frontend:latest
+    image: omkar5655/frontend-react:v1
     container_name: frontend
     stdin_open: true
     ports:
       - "3000:3000"
+    environment:
+      - CONTAINER_NAME=http://backend:8080
     depends_on:
       - backend
   backend:
