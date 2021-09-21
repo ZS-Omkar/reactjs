@@ -12,11 +12,11 @@ services:
     image: omkar5655/backend-node:v2
     container_name: backend
     environment:
-      database: loizenaidb
-      username: postgres
-      password: 123
-      host: postgres
-      dialect: postgres
+      - PGDATABASE=loizenaidb
+      - PGUSER=postgres
+      - PGPASS=234
+      - PGHOST=postgres
+      - PGDIALECT=postgres
     ports:
       - "8080:8080"
     depends_on:
