@@ -11,7 +11,7 @@ services:
     depends_on:
       - backend
   backend:
-    image: omkar5655/backend-node:v4
+    image: omkar5655/backend-node:v5
     container_name: backend
     environment:
       - PGDATABASE=loizenaidb
