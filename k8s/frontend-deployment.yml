@@ -13,7 +13,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: omkar5655/frontend:0.0.1
+          image: omkar5655/frontend-react:v8
           stdin: true
           ports:
             - containerPort: 3000
+          env:
+            - name: CONTAINER_NAME
+              value: http://backend:8080
