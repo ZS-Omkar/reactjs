@@ -15,7 +15,7 @@ spec:
                 name: frontend-cluster-service
                 port:
                   number: 3000
-          - path: /customer
+          - path: /customers
             pathType: Prefix
             backend:
               service:
