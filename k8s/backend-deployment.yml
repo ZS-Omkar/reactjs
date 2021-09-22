@@ -16,3 +16,14 @@ spec:
           image: omkar5655/backend:0.0.1
           ports:
             - containerPort: 8080
+          env:
+            - name: PGDATABASE
+              value: loizenaidb
+            - name: PGUSER
+              value: postgres
+            - name: PGPASS
+              value: "123"
+            - name: PGHOST
+              value: postgres-service
+            - name: PGDIALECT
+              value: postgres
