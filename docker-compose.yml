@@ -1,7 +1,7 @@
 version: "3"
 services:
   frontend:
-    image: omkar5655/frontend-react:v6
+    image: omkar5655/frontend-react:v7
     container_name: frontend
     stdin_open: true
     ports:
@@ -11,7 +11,7 @@ services:
     depends_on:
       - backend
   backend:
-    image: omkar5655/backend-node:v5
+    image: omkar5655/backend-node:v6
     container_name: backend
     environment:
       - PGDATABASE=loizenaidb
