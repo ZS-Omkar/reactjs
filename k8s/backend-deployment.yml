@@ -24,6 +24,6 @@ spec:
             - name: PGPASS
               value: "123"
             - name: PGHOST
-              value: postgres-service
+              value: postgres-cluster-service
             - name: PGDIALECT
               value: postgres
