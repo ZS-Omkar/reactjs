@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: omkar5655/backend:0.0.1
+          image: omkar5655/backend-node:v6
           ports:
             - containerPort: 8080
           env:
